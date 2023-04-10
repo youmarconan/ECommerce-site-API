@@ -1,5 +1,7 @@
 package com.ecommerce.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -68,4 +70,8 @@ public class UserService {
     public Response order (Item item){
         return new Response(item.getName() + " has been oerdered");
     }
-}
+
+    
+    public List<User> allUsers(){
+        return userRepo.findAll();
+    }}
