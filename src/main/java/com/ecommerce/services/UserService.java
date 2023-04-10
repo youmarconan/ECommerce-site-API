@@ -1,5 +1,6 @@
 package com.ecommerce.services;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,7 +69,7 @@ public class UserService {
     }
 
     public Response order (Item item){
-        return new Response(item.getName() + " has been oerdered");
+        return new Response(item.getName() + " has been oerdered at " + LocalDateTime.now().toString());
     }
 
     
